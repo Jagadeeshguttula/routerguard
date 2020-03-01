@@ -1,0 +1,8 @@
+<a routerLink="hm">Home</a>
+<a routerLink="ad">Admin</a>
+<a routerLink="lg" *ngIf="obj.tmp">Login</a>
+<a routerLink="lo" *ngIf="!obj.tmp">Logout</a> - {{obj.tmp}}
+<br>
+<router-outlet>
+
+</router-outlet>
