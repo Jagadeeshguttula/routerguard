@@ -1,0 +1,11 @@
+<form #frm1="ngForm">
+  <input type="text" [(ngModel)]="t1" name="txt1" 
+  #c1="ngModel" required minlength="5">
+<br>
+<input type="text" [(ngModel)]="t2" name="txt2" 
+#c2="ngModel" required minlength="3">
+<br>
+<input type="button" value="Click" 
+[disabled]="frm1.invalid">
+{{frm1.valid}}
+</form>

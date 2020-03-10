@@ -1,0 +1,15 @@
+<style>
+input.ng-valid{
+color:green;
+}
+input.ng-invalid{
+  color:red;
+}
+</style>
+<form [formGroup]="myform">
+  <input formControlName="fname">
+  <span *ngIf="myform.controls.fname.errors && myform.controls.fname.errors.required">Enter text</span>
+  <span  *ngIf="myform.controls.fname.errors && myform.controls.fname.errors.pattern">Enter Valid data</span>
+  <br>
+  <input type="button" value="Click" (click)="fun1()">
+</form>

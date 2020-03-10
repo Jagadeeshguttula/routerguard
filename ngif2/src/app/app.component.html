@@ -1,0 +1,12 @@
+<input type="text" [(ngModel)]="t1">
+<br>
+<input type="text" [(ngModel)]="t2">
+<br>
+<input type="button" value="Click" (click)="fun1()">
+<h1 *ngIf="x>y;else xyz">
+  X is big
+</h1>
+<ng-template #xyz>
+Y is big
+</ng-template>
+<li *ngFor="let x of arr;let i=index">{{x}}-{{i}}</li>

@@ -1,0 +1,26 @@
+<style>
+  select.ng-valid{
+    border:1px solid green;
+  }
+  select.ng-invalid{
+    border:1px solid red;
+  }
+  </style>
+<form #frm1="ngForm">
+<select required name="drp1" [(ngModel)]="d1" #cnt1="ngModel">
+  <option value="">------Choose------</option>
+  <option>Angular</option>
+  <option>React</option>
+</select>
+<span *ngIf="cnt1.invalid">select  one option</span>
+<br>
+<input type="radio" value="m" name="rad1"
+ [(ngModel)]="r1" required #gen="ngModel">Male
+<input type="radio" value="f" name="rad1"
+ [(ngModel)]="r1" required #gen="ngModel">FeMale
+<span  *ngIf="gen.invalid">Select gender</span>
+<br>
+<input type="checkbox" [(ngModel)]="abc" #cnt11="ngModel" required name="chk1">I Accept T&c
+<span style='color:red' *ngIf="cnt11.invalid">*</span>
+<input type="button" value="Send" (click)="funsend(frm1)">
+</form>

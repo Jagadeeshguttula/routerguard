@@ -1,0 +1,13 @@
+exp=require("express")
+app=exp()
+bp=require("body-parser")
+app.use(bp.json())
+mj=require("mongojs")
+cr=require("cors")
+app.use(cr())
+conn=mj('mongodb://localhost:27017/bat430')
+app.listen(1000)
+app.post("/ins",(req,res)=>{
+ conn.tbl_user.save(req.body)
+ res.send({resp:"Inserted"})
+})

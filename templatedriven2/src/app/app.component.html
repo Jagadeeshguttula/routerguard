@@ -1,0 +1,10 @@
+<form>
+  <input [(ngModel)]="t1" name="txt1" #c1="ngModel" required>
+  <span *ngIf="c1.touched  && c1.invalid">Enter text</span>
+  <br>
+  <input type="text" [(ngModel)]="txt2" name="t2" 
+  #c2="ngModel" required minlength="5">
+  <span *ngIf="c2.errors && c2.errors.required">Enter Password</span>
+  <span *ngIf="c2.errors && c2.errors.minlength">Min 5 characters</span>
+
+</form>

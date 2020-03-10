@@ -1,0 +1,9 @@
+<form>
+  <select [(ngModel)]="drp1" name="d1" required #c1="ngModel">
+    <option value="">---Choose City----</option>
+    <option >Hyderabad</option>
+    <option value="3">Secbad</option>
+  </select>
+  <span style="color:red" *ngIf="c1.invalid">*</span>
+</form>
+{{drp1}}--{{c1.invalid}}

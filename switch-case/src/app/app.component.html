@@ -1,0 +1,28 @@
+{{x}}
+<select [(ngModel)]="x">
+  <option value="m">Mango</option>
+  <option value="c">Cherry</option>
+  <option value="a">Apple</option>
+  <option value="z">All</option>
+</select>
+<div [ngSwitch]="x">
+  <div *ngSwitchCase="'m'">
+    <h2>Mango</h2>
+    <img src="../assets/mango.jpg" width="100">
+  </div>
+  <div *ngSwitchCase="'a'">
+    <h2>Apple</h2>
+    <img src="../assets/apple.jpg" width="100">
+  </div>
+  <div *ngSwitchCase="'c'">
+    <h2>Cherry</h2>
+    <img src="../assets/cherry.jpg" width="100">
+
+  </div>
+  <div *ngSwitchDefault>
+    <img src="../assets/mango.jpg" width="100">
+    <img src="../assets/cherry.jpg" width="100">
+    <img src="../assets/apple.jpg" width="100">
+
+  </div>
+</div>

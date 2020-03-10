@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+.headerclass{
+    background-color:lightblue;
+    height:100px;
+
+}
+.leftclass{
+    height:300px;
+    background-color:yellow;
+    width:100px;
+    float:left;
+}
+body{
+    margin:0px;
+}
+.rgtclass{
+    height:300px;
+    background-color:silver;
+    width:100%;
+}
+.footerclass{
+    background-color:lightgreen;
+    height:200px;
+}

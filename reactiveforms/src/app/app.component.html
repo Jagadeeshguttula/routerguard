@@ -1,0 +1,6 @@
+<form [formGroup]="myform">
+  <input type="text" formControlName="firstname">
+  <br>
+  <span *ngIf="myform.controls.firstname.errors && myform.controls.firstname.errors.required">Enter Text</span>
+<span *ngIf="myform.controls.firstname.errors && myform.controls.firstname.errors.minlength">Min 5 char</span>
+</form>

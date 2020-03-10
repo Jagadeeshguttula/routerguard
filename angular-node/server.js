@@ -1,0 +1,10 @@
+exp=require("express")
+cr=require("cors")
+app=exp()
+app.use(cr())
+bp=require("body-parser")
+app.use(bp.json())
+app.listen(1000)
+	app.get("/met2",(re,rs)=>{
+		rs.send({un:"scott"})
+	})

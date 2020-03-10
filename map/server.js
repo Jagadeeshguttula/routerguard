@@ -1,0 +1,10 @@
+exp=require("express")
+app=exp()
+app.listen(1000)
+mj=require("mongojs")
+con=mj("mongodb://localhost:27017/project")
+app.get("/met1",(req,res)=>{
+con.tbl_category.find((err,result)=>{
+res.send(result)
+})
+})
